@@ -1,0 +1,21 @@
+<ion-header [translucent]="true">
+  <ion-toolbar color="primary">
+    <ion-buttons slot="start">
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
+    <ion-title>Consumindo API</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <ion-button (click)="obterEnderecoComObservable('26112230')">Obter Endereco 26112230 com Observable</ion-button>
+  <ion-button (click)="obterEnderecoComObservable('26115470')">Obter Endereco 26115470 com Observable</ion-button>
+
+  <ion-button (click)="obterEnderecoComPromisse('26112230')">Obter Endereco 26112230 com Promisse</ion-button>
+  <ion-button (click)="obterEnderecoComPromisse('26115470')">Obter Endereco 26115470 com Promisse</ion-button>
+
+  <h4>Logradouro</h4>
+  {{endereco?.logradouro}}
+  <h4>Bairro</h4>
+  {{endereco?.bairro}}
+</ion-content>

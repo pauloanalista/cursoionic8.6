@@ -1,0 +1,18 @@
+<ion-header [translucent]="true">
+  <ion-toolbar color="primary">
+    <ion-buttons slot="start">
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
+    <ion-title>Componentes Visuais</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <ion-button (click)="navegar('visual/button')">Ion Button</ion-button>
+  <ion-button (click)="navegar('visual/alert')">Alert</ion-button>
+  <ion-button (click)="navegar('visual/badge')">Badge</ion-button>
+
+  <ion-button expand="block" color="dark" (click)="navegar('visual/componentes-html')">Componentes Html</ion-button>
+  <ion-button expand="block" color="danger" (click)="navegar('visual/componentes-js')">Componentes JS</ion-button>
+
+</ion-content>

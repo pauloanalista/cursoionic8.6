@@ -1,0 +1,35 @@
+<ion-header [translucent]="true">
+  <ion-toolbar color="primary">
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="/visual"></ion-back-button>
+    </ion-buttons>
+    <ion-title>Alert</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <ion-button id="aSimplesIos">Alerta Simples IOS</ion-button>
+  <ion-button id="aSimplesMd">Alerta Simples Android</ion-button>
+
+  <ion-alert mode="ios" trigger="aSimplesIos" header="Atenção!" subHeader="Sistema de Controle"
+    message="Operação realizada com sucesso!" [buttons]="alertButtons"></ion-alert>
+
+  <ion-alert mode="md" trigger="aSimplesMd" header="Atenção!" subHeader="Sistema de Controle"
+    message="Operação realizada com sucesso!" [buttons]="alertButtons"></ion-alert>
+
+
+  <ion-button (click)="setOpen(true)">Click Me</ion-button>
+  <ion-alert [isOpen]="isAlertOpen" header="A Short Title Is Best" subHeader="A Sub Header Is Optional"
+    message="A message should be a short, complete sentence." [buttons]="alertButtons"
+    (didDismiss)="setOpen(false)"></ion-alert>
+
+  <h3>Usando AlertController</h3>
+  <ion-button (click)="abrirAlerta()">Abrir alerta via JS</ion-button>
+
+  <h3>Usando AlertController com ações</h3>
+  <ion-button (click)="abrirAlertaComAcao()">Abrir alerta via JS com Ação</ion-button>
+
+  <h3>Usando AlertController com inputs</h3>
+  <ion-button (click)="abrirAlertaComInput()">Abrir alerta via JS com Input</ion-button>
+
+</ion-content>

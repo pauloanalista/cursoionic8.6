@@ -1,0 +1,23 @@
+<ion-header [translucent]="true">
+  <ion-toolbar color="primary">
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="/visual"></ion-back-button>
+    </ion-buttons>
+    <ion-title>Componentes JS</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <ion-button id="open-toast" expand="block">Enviar Toast Via Html</ion-button>
+  <ion-toast trigger="open-toast" message="This toast will disappear after 5 seconds" [duration]="5000"></ion-toast>
+  <ion-button expand="block" (click)="enviarToast()">Enviar Toast Via JS</ion-button>
+
+  <h2>Loading</h2>
+  <ion-button expand="block" id="open-loading">Loading com Html</ion-button>
+  <ion-loading trigger="open-loading" message="Dismissing after 3 seconds..." duration="3000"></ion-loading>
+
+  <ion-button expand="block" (click)="openLoading()">Loading com JS</ion-button>
+
+  <h2>Action SheetController</h2>
+  <ion-button expand="block" (click)="openActionSheet()">ActionSheet com JS</ion-button>
+</ion-content>

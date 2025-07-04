@@ -1,0 +1,23 @@
+<ion-header [translucent]="true">
+  <ion-toolbar color="primary">
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="/visual"></ion-back-button>
+    </ion-buttons>
+    <ion-title>Ion-Badge</ion-title>
+    <ion-badge slot="end">10</ion-badge>
+  </ion-toolbar>
+</ion-header>
+
+
+<ion-content [fullscreen]="true">
+  <ion-list>
+    <ion-item>
+      <ion-badge slot="start">11</ion-badge>
+      <ion-label>Badge in start slot</ion-label>
+    </ion-item>
+    <ion-item>
+      <ion-badge slot="end" color="danger">22</ion-badge>
+      <ion-label>Badge in end slot</ion-label>
+    </ion-item>
+  </ion-list>
+</ion-content>
